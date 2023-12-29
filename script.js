@@ -14,7 +14,25 @@ $(function () {
     localStorage.setItem(timeBlockId, userInput);
   });
 
- 
+  // Apply past, present, or future class to each time block
+  function updateHourlyBlocks() {
+    var currentHour = dayjs().hour();
+
+    $(".time-block").each(function () {
+      // Get the hour from the time-block id
+      var blockHour = parseInt($(this).attr("id").split("-")[1]);
+
+      // Compare the blockHour with the currentHour and apply the appropriate class
+      if (blockHour < currentHour) {
+        $(this).removeClass("present future").addClass("past");
+      } else if (blockHour === currentHour) {
+        $(this).removeClass("past future").addClass("present");
+      } else {
+        $(this).removeClass("past present").addClass("future");
+      }
+    });
+  }
+
 
 
 
