@@ -33,6 +33,22 @@ $(function () {
     });
   }
 
+  // Get any user input that was saved in localStorage and set the values of corresponding textarea elements
+  function loadSavedEvents() {
+    $(".time-block").each(function () {
+      var timeBlockId = $(this).attr("id");
+      var savedEvent = localStorage.getItem(timeBlockId);
+
+      // Set the value of the textarea to the saved event
+      $(this).children(".description").val(savedEvent);
+    });
+  }
+
+  // Call the functions to initialize the page
+  updateHourlyBlocks();
+  loadSavedEvents();
+});
+
 
 
 
