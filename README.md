@@ -97,3 +97,9 @@ You are required to submit the following for review:
 
 - - -
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+
+
+![Alt text](<Screenshot 2024-01-02 215004.png>)
+
+[Title](https://katelynnmm.github.io/daily-planner/)
